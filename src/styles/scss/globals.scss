@@ -1,2 +1,58 @@
-//? Bootstrap Source SASS Files
-@import '~bootstrap/scss/bootstrap';
+//* HTML | Root
+html {
+  --color-bg2: rgb(0, 17, 82);
+  --color1: 18, 113, 255;
+  --color2: 221, 74, 255;
+  --color3: 100, 220, 255;
+  --color4: 200, 50, 50;
+  --color5: 180, 180, 50;
+  --color-interactive: 140, 100, 255;
+  --circle-size: 90%;
+  --blending: hard-light;
+  //* GLOBAL FONT
+  // font-family: var(--font-nunito);
+  // h1, h2, h3, h4, h5, h6 { font-family: var(--font-roboto); }
+  // h1 { @include responsive_h1_fontsize; }
+  body {
+    // background-color: var(--background-dark-mode);
+    h1, h2, h3, h4, h5, h6, p, small, span, hr, ol, li, time {
+      // color: var(--text-light-mode);
+    }
+  }
+}
+
+//? Animation Keyframes
+@import './animations';
+
+//? Vertical & Horizontal Centered Container | Methods
+//* FLEXBOX
+.flexbox-centered-container {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
+  height: 100vh;           /* full viewport height */
+}
+
+//* GRID
+.grid-centered-container {
+  display: grid;
+  place-items: center;  /* shorthand for align-items and justify-items */
+  height: 100vh;
+}
+
+//* ABSOLUTE POSITION & TRANSFORM
+.position-centered-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* offset by half of element size */
+}
+
+//* margin: auto (FIXED SIZE ELEMENTS ONLY)
+.margin-auto-centered-container {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  position: relative;
+  top: 0; bottom: 0; left: 0; right: 0;
+}
